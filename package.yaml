@@ -7,8 +7,8 @@ description: "igraph<\"http://igraph.org/c/\"> is a library for creating
                 interface of igraph."
 license: "MIT"
 author: "Kai Zhang"
+maintainer: "Jean-Baptiste Mazon"
 copyright: "(c) 2016-2021 Kai Zhang"
-maintainer: "kai@kzhang.org"
 
 extra-source-files:
   - cbits/*.h
@@ -25,13 +25,15 @@ extra-source-files:
   - igraph/COPYING
 
   - stack.yaml
+
+extra-doc-files:
   - README.md
   - ChangeLog.md
 
 library:
   ghc-options: -Wall -fno-warn-unused-matches 
 
-  build-tools:
+  build-tool-depends:
     - c2hs:c2hs >=0.25.0
   source-dirs:
     - src
@@ -115,4 +117,4 @@ tests:
       - tasty-hunit
       - random
 
-github: kaizhang/haskell-igraph
+github: jmazon/haskell-igraph

@@ -11,10 +11,10 @@ version:        0.8.5
 synopsis:       Bindings to the igraph C library (v0.8.5).
 description:    igraph<"http://igraph.org/c/"> is a library for creating and manipulating large graphs. This package provides the Haskell interface of igraph.
 category:       Math
-homepage:       https://github.com/kaizhang/haskell-igraph#readme
-bug-reports:    https://github.com/kaizhang/haskell-igraph/issues
+homepage:       https://github.com/jmazon/haskell-igraph#readme
+bug-reports:    https://github.com/jmazon/haskell-igraph/issues
 author:         Kai Zhang
-maintainer:     kai@kzhang.org
+maintainer:     Jean-Baptiste Mazon
 copyright:      (c) 2016-2021 Kai Zhang
 license:        MIT
 license-file:   LICENSE
@@ -230,12 +230,14 @@ extra-source-files:
     igraph/AUTHORS
     igraph/COPYING
     stack.yaml
+
+extra-doc-files:
     README.md
     ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/kaizhang/haskell-igraph
+  location: https://github.com/jmazon/haskell-igraph
 
 library
   exposed-modules:
@@ -818,8 +820,8 @@ library
       igraph/src/utils.cc
   extra-libraries:
       stdc++
-  build-tools:
-      c2hs >=0.25.0
+  build-tool-depends:
+      c2hs:c2hs >=0.25.0
   build-depends:
       base >=4.10 && <5.0
     , bytestring >=0.9
